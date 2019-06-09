@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,54 +8,86 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="Welcome to Tecmax"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Amit" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:hint="First Name" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:hint="Last Name" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btClinic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@color/colorOrange"
-        android:text="Click Me"
-        android:textColor="@android:color/white" />
-
-
-    <TextView
-        android:id="@+id/copyRights"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
         android:padding="10dp"
-        android:text="CopyRights Reserved To Tecmax" />
-</LinearLayout>
+        android:text="Add A"
+        android:id="@+id/a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/b"
+        android:text="Add B"
+        app:layout_constraintEnd_toStartOf="@+id/c"
+        app:layout_constraintStart_toEndOf="@+id/a"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/c"
+        android:text="Rem A"
+        app:layout_constraintStart_toEndOf="@+id/b"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/d"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/d"
+        android:text="Rem B"
+        app:layout_constraintStart_toEndOf="@+id/c"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/rA"
+        android:text="Rep A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a"
+        app:layout_constraintEnd_toStartOf="@+id/rB"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/rB"
+        android:text="Rep B"
+        app:layout_constraintStart_toEndOf="@+id/rA"
+        app:layout_constraintTop_toBottomOf="@+id/b"
+        app:layout_constraintEnd_toStartOf="@+id/rC"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/rC"
+        android:text="Show A"
+        app:layout_constraintStart_toEndOf="@+id/rB"
+        app:layout_constraintTop_toBottomOf="@+id/c"
+        app:layout_constraintEnd_toStartOf="@+id/rD"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/rD"
+        android:text="Hide A"
+        app:layout_constraintStart_toEndOf="@+id/rC"
+        app:layout_constraintTop_toBottomOf="@+id/d"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:id="@+id/frame"
+    app:layout_constraintTop_toBottomOf="@+id/rA"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>
+
+

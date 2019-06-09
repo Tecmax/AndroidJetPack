@@ -1,4 +1,4 @@
-package com.hotstar.aftabbatch.retrofit;
+package com.hotstar.aftabbatch.realm;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

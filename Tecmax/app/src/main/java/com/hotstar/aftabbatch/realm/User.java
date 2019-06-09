@@ -1,4 +1,4 @@
-package com.hotstar.aftabbatch.retrofit;
+package com.hotstar.aftabbatch.realm;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;

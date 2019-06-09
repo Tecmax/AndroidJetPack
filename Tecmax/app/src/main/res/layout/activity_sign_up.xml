@@ -6,54 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".SignUpActivity">
 
-    <TextView
-        android:id="@+id/tvWelcomeTechie"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/banner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="Welcome To Android"
-        android:textSize="@dimen/app_common" />
-
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/tilUsername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvWelcomeTechie">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/etUserName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter the UserName" />
-    </android.support.design.widget.TextInputLayout>
-
-
-    <EditText
-        android:id="@+id/etDOB"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tilUsername"
-        android:hint="Enter the DOB" />
-
-    <Button
-        android:id="@+id/signUp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="@color/colorOrange"
-        android:text="SignUp"
-        android:textColor="@android:color/white" />
-
-    <TextView
-        android:id="@+id/copyRights"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="CopyRights Reserved To Tecmax" />
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
