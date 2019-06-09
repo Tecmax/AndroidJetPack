@@ -1,4 +1,4 @@
-package com.hotstar.aftabbatch.resrt;
+package com.hotstar.aftabbatch.resrt.category;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.hotstar.aftabbatch.R;
+import com.hotstar.aftabbatch.resrt.BaseClient;
+import com.hotstar.aftabbatch.resrt.NetworkAPI;
+import com.hotstar.aftabbatch.resrt.model.CatergoryResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;

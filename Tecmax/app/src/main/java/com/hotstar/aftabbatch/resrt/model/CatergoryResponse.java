@@ -1,4 +1,4 @@
-package com.hotstar.aftabbatch.resrt;
+package com.hotstar.aftabbatch.resrt.model;
 
 import com.google.gson.annotations.SerializedName;
 

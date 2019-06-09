@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".resrt.MealActivity">
+        <activity android:name=".resrt.meals.MealDescriptionActivity"></activity>
+        <activity android:name=".resrt.category.MealActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,12 +42,11 @@
 
         <activity
             android:name=".ContactActivity"
-            android:label="@string/title_activity_contact">
-        </activity>
+            android:label="@string/title_activity_contact"></activity>
         <activity
             android:name=".ChatsActivity"
             android:label="@string/title_activity_chats"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".realm.DBActivity" />
         <activity
             android:name=".HomeActivity"
