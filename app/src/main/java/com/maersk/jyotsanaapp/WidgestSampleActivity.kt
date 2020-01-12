@@ -1,18 +1,17 @@
 package com.maersk.jyotsanaapp
 
 import android.app.DatePickerDialog
-import android.app.Dialog
 import android.app.TimePickerDialog
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.DatePicker
-import android.widget.TimePicker
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_widgest_sample.*
 import kotlinx.android.synthetic.main.content_widgest_sample.*
 
@@ -71,6 +70,22 @@ class WidgestSampleActivity : AppCompatActivity() {
         )
         selectMatch.adapter = adapter
 
+
+
+        selectBudget.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                Log.e("seekbar", "progress track ${progress}")
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                Log.e("seekbar", "Start track ${seekBar?.progress}")
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                Log.e("seekbar", "Stop track ${seekBar?.progress}")
+            }
+        })
+
         alertdil.setOnClickListener {
             val asd = AlertDialog.Builder(this@WidgestSampleActivity)
             asd.setMessage("Hello Rahul")
@@ -86,6 +101,25 @@ class WidgestSampleActivity : AppCompatActivity() {
             asdd.show()
 
         }
+
+        selectedTv.setOnClickListener(object : View.OnClickListener {
+
+            internal var isPlaying = false
+
+            override fun onClick(v: View) {
+                if (!isPlaying) {
+                    temp.start()
+                    isPlaying = true
+                } else {
+                    temp.stop()
+                    isPlaying = false
+                }
+
+                selectedTv.text = if (isPlaying) "start" else "stop"
+                Toast.makeText(this@WidgestSampleActivity, getString(if (isPlaying) R.string.playing else R.string.stopped), Toast.LENGTH_SHORT).show()
+            }
+        })
+
     }
 
 }

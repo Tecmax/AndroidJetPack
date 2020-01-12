@@ -54,9 +54,18 @@
 
     <androidx.appcompat.widget.AppCompatSeekBar
         android:id="@+id/selectBudget"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:max="10000"
         app:layout_constraintStart_toStartOf="@+id/selectMatch"
         app:layout_constraintTop_toBottomOf="@+id/selectMatch" />
 
+
+    <Chronometer
+        android:id="@+id/temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/selectBudget"
+        app:layout_constraintTop_toBottomOf="@+id/selectBudget" />
 </androidx.constraintlayout.widget.ConstraintLayout>
