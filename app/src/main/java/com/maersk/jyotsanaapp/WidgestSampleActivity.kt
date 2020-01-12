@@ -2,9 +2,11 @@ package com.maersk.jyotsanaapp
 
 import android.app.DatePickerDialog
 import android.app.Dialog
+import android.app.TimePickerDialog
 import android.os.Build
 import android.os.Bundle
 import android.widget.DatePicker
+import android.widget.TimePicker
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
@@ -38,6 +40,20 @@ class WidgestSampleActivity : AppCompatActivity() {
                 ).show()
             }
 
+        }
+
+        timePi.setOnClickListener {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                TimePickerDialog(
+                    this@WidgestSampleActivity,
+                    TimePickerDialog.OnTimeSetListener { view, hour, min ->
+                        selectedTv.text = "${hour}:$min"
+                    },
+                    3,
+                    3,
+                    true
+                ).show()
+            }
         }
 
 
