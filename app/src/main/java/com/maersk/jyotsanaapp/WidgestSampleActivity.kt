@@ -5,6 +5,7 @@ import android.app.Dialog
 import android.app.TimePickerDialog
 import android.os.Build
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
@@ -21,6 +22,13 @@ class WidgestSampleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_widgest_sample)
         setSupportActionBar(customTol)
+
+        val circSchedules =
+            arrayListOf<String>(
+                "Jan 14, TueIndia vs Australia, 1st ODI 1:30 PM",
+                "Jan 17, FriIndia vs Australia, 2nd ODI 3:30 PM",
+                "Jan 19, TueIndia vs Australia, 3st ODI 7:30 PM"
+            )
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -56,6 +64,12 @@ class WidgestSampleActivity : AppCompatActivity() {
             }
         }
 
+        val adapter = ArrayAdapter<String>(
+            this@WidgestSampleActivity,
+            android.R.layout.simple_list_item_1,
+            circSchedules
+        )
+        selectMatch.adapter = adapter
 
         alertdil.setOnClickListener {
             val asd = AlertDialog.Builder(this@WidgestSampleActivity)

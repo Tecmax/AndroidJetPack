@@ -45,4 +45,18 @@
         app:layout_constraintTop_toBottomOf="@+id/alertdil" />
 
 
+    <Spinner
+        android:id="@+id/selectMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/selectedTv"
+        app:layout_constraintTop_toBottomOf="@+id/selectedTv" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/selectBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/selectMatch"
+        app:layout_constraintTop_toBottomOf="@+id/selectMatch" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
