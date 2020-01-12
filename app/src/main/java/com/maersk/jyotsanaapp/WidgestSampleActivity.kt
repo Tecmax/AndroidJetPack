@@ -1,7 +1,10 @@
 package com.maersk.jyotsanaapp
 
+import android.app.DatePickerDialog
 import android.app.Dialog
+import android.os.Build
 import android.os.Bundle
+import android.widget.DatePicker
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
@@ -20,6 +23,21 @@ class WidgestSampleActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+        }
+
+        calend.setOnClickListener {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                DatePickerDialog(
+                    this@WidgestSampleActivity,
+                    DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                        selectedTv.text = "$dayOfMonth/${month + 1}/$year"
+                    },
+                    1993,
+                    3,
+                    4
+                ).show()
+            }
+
         }
 
 
