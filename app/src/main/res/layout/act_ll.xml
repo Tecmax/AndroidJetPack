@@ -19,8 +19,8 @@
         android:id="@+id/namesLL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_below="@+id/titleTV"
+        android:orientation="horizontal"
         android:weightSum="1">
 
         <EditText
@@ -41,16 +41,23 @@
 
     <CheckBox
         android:id="@+id/termsCB"
-        android:layout_below="@+id/namesLL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/namesLL"
         android:text="Accept Terms an Conditions" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/loadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/continueBT"
+        android:layout_below="@+id/termsCB" />
 
     <Button
         android:id="@+id/continueBT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:layout_centerInParent="true"
+        android:layout_above="@+id/authoruzedTV"
         android:text="Continue" />
 
     <TextView
