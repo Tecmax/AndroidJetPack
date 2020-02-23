@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.HelloActivity">
+
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/acceptMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accept Terms &amp; Conditions" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FeMale" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/turnOnWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Turn On Wifi" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/countr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="30" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/doValidations"
+        android:text="Validate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

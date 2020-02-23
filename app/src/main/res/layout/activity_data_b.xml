@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="StudentDetails"
+            type="com.maersk.androidmng.dbinding.Student" />
+
+        <variable
+            name="handlers"
+            type="com.maersk.androidmng.dbinding.DataBActivity.MyClickHandlers" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".dbinding.DataBActivity">
+
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:text="@{StudentDetails.name}" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:text="@{StudentDetails.email}" />
+
+        <Button
+            android:id="@+id/setDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v)->handlers.onButtonClick(v)}"
+            android:text="Set Details" />
+
+
+        <Button
+            android:id="@+id/btAnj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v)->handlers.onButtonClickWithParam(v,StudentDetails)}"
+            android:text="Hello" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

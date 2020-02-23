@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Hello Harsha"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/namesLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/titleTV"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/firstNameET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="@string/hint_first_name" />
+
+        <EditText
+            android:id="@+id/lastNameEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="Last Name" />
+    </LinearLayout>
+
+
+    <CheckBox
+        android:id="@+id/termsCB"
+        android:layout_below="@+id/namesLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accept Terms an Conditions" />
+
+    <Button
+        android:id="@+id/continueBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+        android:text="Continue" />
+
+    <TextView
+        android:id="@+id/authoruzedTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Authorised By Amv Labs"
+        android:textSize="18sp" />
+</RelativeLayout>
